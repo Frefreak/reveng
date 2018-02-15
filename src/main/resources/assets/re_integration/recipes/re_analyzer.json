@@ -1,0 +1,23 @@
+{
+  "result": {
+    "item": "re_integration:re_analyzer"
+  },
+  "pattern": [
+    "RLR",
+    "LDL",
+    "RLR"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "L": {
+      "item": "minecraft:dye",
+      "data": 4
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    }
+  }
+}

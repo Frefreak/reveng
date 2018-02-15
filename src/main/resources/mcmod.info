@@ -1,0 +1,16 @@
+[
+{
+  "modid": "re_integration",
+  "name": "Reverse Engineering Integration",
+  "description": "Let's Reverse!",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["c4r50nz"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

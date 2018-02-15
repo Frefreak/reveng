@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "re_integration:blocks/analyzer_side",
+		"up": "re_integration:blocks/analyzer_top",
+		"down": "re_integration:blocks/analyzer_bottom",
+		"north": "re_integration:blocks/analyzer_side",
+		"south": "re_integration:blocks/analyzer_side",
+		"east": "re_integration:blocks/analyzer_side",
+		"west": "re_integration:blocks/analyzer_side"
+	}
+}

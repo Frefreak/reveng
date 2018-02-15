@@ -1,0 +1,11 @@
+{
+    "forge_marker": 1,
+    "variants": {
+	    "facing=down": {"model": "re_integration:re_analyzer", "x": 180},
+	    "facing=up": {"model": "re_integration:re_analyzer"},
+	    "facing=north": {"model": "re_integration:re_analyzer", "x": 90},
+	    "facing=south": {"model": "re_integration:re_analyzer", "x": 270},
+	    "facing=west": {"model": "re_integration:re_analyzer", "x": 90, "y": 270},
+	    "facing=east": {"model": "re_integration:re_analyzer", "x": 90, "y": 90}
+    }
+}
