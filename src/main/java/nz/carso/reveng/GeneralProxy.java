@@ -16,23 +16,9 @@ import nz.carso.reveng.common.gui.REGuiHandler;
 import org.apache.logging.log4j.Logger;
 
 public class GeneralProxy {
-    public static Logger logger;
-    public final static CreativeTabs reTab = new CreativeTabs("RE integration") {
-        @Override
-        public ItemStack getTabIconItem() {
-            return new ItemStack(Items.DIAMOND, 1);
-        }
-
-        @Override
-        public String getTranslatedTabLabel() {
-            return getTabLabel();
-        }
-    };
 
     public void preInit(FMLPreInitializationEvent event)
     {
-        logger = event.getModLog();
-        GameRegistry.registerTileEntity(TileEntityREAnalyzer.class, "re_analyzer");
     }
 
 

@@ -36,7 +36,7 @@ public class BlockREAnalyzer extends BlockDirectional {
         setRegistryName("re_integration:re_analyzer");
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.UP));
         setUnlocalizedName("re_integration:re_analyzer");
-        setCreativeTab(GeneralProxy.reTab);
+        setCreativeTab(RevEng.reTab);
     }
 
     @Override

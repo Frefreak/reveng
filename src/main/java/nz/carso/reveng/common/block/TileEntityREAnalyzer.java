@@ -125,7 +125,6 @@ public class TileEntityREAnalyzer extends TileEntity implements ITickable {
     @Nullable
     @Override
     public SPacketUpdateTileEntity getUpdatePacket() {
-        System.out.println("wtf");
         return new SPacketUpdateTileEntity(this.pos, 3, this.getUpdateTag());
     }
 }

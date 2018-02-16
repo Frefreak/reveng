@@ -1,5 +1,8 @@
 package nz.carso.reveng;
 
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -7,6 +10,8 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import nz.carso.reveng.common.block.TileEntityREAnalyzer;
 import nz.carso.reveng.common.gui.REGuiHandler;
 import nz.carso.reveng.common.network.REPacketHandler;
 import org.apache.logging.log4j.Logger;
@@ -20,6 +25,18 @@ public class RevEng
 
     public static Logger logger;
 
+    public final static CreativeTabs reTab = new CreativeTabs("RE integration") {
+        @Override
+        public ItemStack getTabIconItem() {
+            return new ItemStack(Items.DIAMOND, 1);
+        }
+
+        @Override
+        public String getTranslatedTabLabel() {
+            return getTabLabel();
+        }
+    };
+
     @Mod.Instance
     public static RevEng instance = new RevEng();
 
@@ -29,8 +46,11 @@ public class RevEng
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+        logger = event.getModLog();
         NetworkRegistry.INSTANCE.registerGuiHandler(this, new REGuiHandler());
         REPacketHandler.init();
+        GameRegistry.registerTileEntity(TileEntityREAnalyzer.class, "re_integration:re_analyzer");
+
         proxy.preInit(event);
     }
 
