@@ -29,13 +29,14 @@ import javax.annotation.Nullable;
 
 public class BlockREAnalyzer extends BlockDirectional {
 
+    public static final String regName = "re_integration:re_analyzer";
     public BlockREAnalyzer() {
         super(Material.ROCK);
         setHardness(2.0F);
         setSoundType(SoundType.STONE);
-        setRegistryName("re_integration:re_analyzer");
+        setRegistryName(regName);
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.UP));
-        setUnlocalizedName("re_integration:re_analyzer");
+        setUnlocalizedName(regName);
         setCreativeTab(RevEng.reTab);
     }
 

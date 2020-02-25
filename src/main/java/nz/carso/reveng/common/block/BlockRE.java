@@ -1,6 +1,5 @@
 package nz.carso.reveng.common.block;
 
-import jline.internal.Preconditions;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -36,9 +35,13 @@ public final class BlockRE {
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         IForgeRegistry<Item> reg = event.getRegistry();
-        for (Block blk : allBlocks) {
-            Item item = new ItemBlock(blk).setRegistryName(Preconditions.checkNotNull(blk.getRegistryName()));
-            reg.register(item);
+
+        for (Block blk: allBlocks) {
+            if (blk.getRegistryName() != null) {
+                Item item = new ItemBlock(blk).setRegistryName(blk.getRegistryName());
+                reg.register(item);
+            }
+
         }
     }
 
